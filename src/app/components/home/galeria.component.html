@@ -1,0 +1,46 @@
+<br/>
+<h1>{{titulo}}</h1>
+<hr/>
+
+<div class="row animated fadeIn fast" *ngIf="peliculas">
+    <!--<img src="{{peliculas[0] | peliculaImagen}}" alt="">-->
+    <!--[ngStyle]="{'background-image': 'url('+(peliculas[0] | peliculaImagen)+')'}"-->
+    <div class="col-6">
+        <div class="row">
+            <div class="col-12 div-pic-1 puntero" [routerLink]="['/pelicula',peliculas[0].id,'home']">
+                <img src="{{peliculas[0] | peliculaImagen}}" alt="">
+                <p class="pic-titulo">{{peliculas[0].origina_title}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 div-pic-2 puntero" [routerLink]="['/pelicula',peliculas[1].id,'home']">
+                <img src="{{peliculas[1] | peliculaImagen}}" alt="">
+                <p class="pic-titulo">{{peliculas[0].origina_title}}</p>
+            </div>
+            <div class="col-6 div-pic-2 puntero" [routerLink]="['pelicula',peliculas[2].id,'home']">
+                <img src="{{peliculas[2] | peliculaImagen}}" alt="">
+                <p class="pic-titulo">{{peliculas[0].origina_title}}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6">
+        <div class="row">
+            <div class="col-md-6 div-pic-2 puntero" [routerLink]="['/pelicula',peliculas[3].id,'home']">
+                <img src="{{peliculas[3] | peliculaImagen}}" alt="">
+                <p class="pic-titulo">{{peliculas[0].origina_title}}</p>
+            </div>
+            <div class="col-md-6 div-pic-2 puntero" [routerLink]="['/pelicula',peliculas[4].id,'home']">
+                <img src="{{peliculas[4] | peliculaImagen}}" alt="">
+                <p class="pic-titulo">{{peliculas[0].origina_title}}</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 div-pic-1 puntero" [routerLink]="['/pelicula',peliculas[5].id,'home']">
+                <img src="{{peliculas[5] | peliculaImagen}}" alt="">
+                <p class="pic-titulo">{{peliculas[0].origina_title}}</p>
+            </div>
+        </div>
+    </div>
+</div>
